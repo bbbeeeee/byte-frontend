@@ -94,8 +94,8 @@ function updateAnalysers(time) {
 
     // analyzer draw code here
     {
-        var SPACING = 3;
-        var BAR_WIDTH = 1;
+        var SPACING = 1;
+        var BAR_WIDTH = 5;
         var numBars = Math.round(canvasWidth / SPACING);
         var freqByteData = new Uint8Array(analyserNode.frequencyBinCount);
 
@@ -115,7 +115,7 @@ function updateAnalysers(time) {
                 magnitude += freqByteData[offset + j];
             magnitude = magnitude / multiplier;
             var magnitude2 = freqByteData[i * multiplier];
-            analyserContext.fillStyle = "silver";
+            analyserContext.fillStyle = '#627AAC';
             analyserContext.fillRect(i * SPACING, canvasHeight, BAR_WIDTH, -magnitude);
         }
     }
