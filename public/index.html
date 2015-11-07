@@ -1,26 +1,32 @@
 <!doctype html>
 <html>
-<head>
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>BeatHub</title>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script src="vendor/parse.js"></script>
-	<script src="vendor/audiodisplay.js"></script>
-	<script src="vendor/recorder.js"></script>
-	<script src="vendor/main.js"></script>
-
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-</head>
-<body>
-	<div id="viz">
-		<canvas id="analyser" width="1024" height="500"></canvas>
-		<canvas id="wavedisplay" width="1024" height="500"></canvas>
-	</div>
-	<div id="controls">
-		<img id="record" src="img/mic128.png" onclick="toggleRecording(this);">
-		<a id="save" href="#"><img src="img/save.svg"></a>
-	</div>
-
-	<script src="main.js"></script>
-</body>
+    <head>
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>BeatHub</title>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+      <script src="vendor/parse.js"></script>
+      <script src="vendor/audiodisplay.js"></script>
+      <script src="vendor/recorder.js"></script>
+      <script src="vendor/main.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="Explore layers"></a></li>
+                <li><a href="Record a layer"></a></li>
+                <li><a href="Your stacks"></a></li>
+                <li><a href="Profile"></a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <h2>Record your layer.</h2>
+            <canvas id="analyser" width="1024" height="500"></canvas>
+            <canvas id="wavedisplay" width="1024" height="500"></canvas>
+            <img id="record" src="img/mic128.png" onclick="toggleRecording(this);">
+            <a id="save" href="#"><img src="img/save.svg"></a>
+        </div>
+        <script src="main.js"></script>
+    </body>
 </html>

@@ -10,7 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "babel": "^6.0.15",
+    "babel-preset-react": "^6.1.2",
+    "babelify": "^7.2.0",
     "body-parser": "^1.14.1",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2"
   }
 }
