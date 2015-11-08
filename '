@@ -10,8 +10,8 @@
         <script src="vendor/main.js"></script>
         <script src="vendor/howler.js"></script>
         <script src="vendor/audio-fx.js">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
         <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
         <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
@@ -27,7 +27,7 @@
             <div class="container">
                 <div class="row">
                     <div class="border col-sm-12">
-                        <div class="feed-container col-sm-6">
+                        <div class="feed col-sm-6">
                             <ul class="feed">
                             </ul>
                             <div id='play'>Play</div>

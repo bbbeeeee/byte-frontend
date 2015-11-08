@@ -17,12 +17,9 @@ var playLayers = function() {
   var howlers = [];
   layers.forEach(function(item) {
     howlers.push(new Howl({
-      urls: ['lol.m4a']
+      urls: ['lol.wav']
     }));
   });
-    howlers.push(new Howl({
-      urls: ['http://files.parsetfss.com/d6dcfbd2-d528-447c-9be9-4f5ed7f906e0/tfss-bce57db5-d214-4413-be21-3c0d4e9a02af-recording-2015-11-07-09-19-36.m4a']
-    }));
 
   howlers.forEach(function(item) {
     console.log('playing' + item.toString());
@@ -43,6 +40,7 @@ aQuery.find({
 
       $('.feed').append(newItem);
 
+      console.log(newItem);
       $('#add' + index).click(function(e) {
         addLayer($(this).data('audio-url'));
       });

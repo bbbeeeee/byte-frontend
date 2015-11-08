@@ -117,6 +117,7 @@ DEALINGS IN THE SOFTWARE.
     var audioObject = new Audio();
 
     var name = 'recording-' + (new Date().toJSON()).slice(0, 10);
+    name = 'hello.wav';
     var file = new Parse.File(name, {base64: window.btoa(blob)});
     file.save().then(function() {
       audioObject.set(name, '');
