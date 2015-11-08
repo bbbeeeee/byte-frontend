@@ -97,3 +97,9 @@ $('#share').click(function() {
     href: 'http://yhackbyte.heroku.com',
   }, function(response){}); 
 });
+
+$('#logout').click(function() {
+  FB.logout(function(response) {
+    // user is now logged out
+  });
+});
