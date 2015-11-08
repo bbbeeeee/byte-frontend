@@ -2,35 +2,37 @@ html { overflow: hidden; }
 
 body { 
   font-family: 'Raleway', sans-serif;
-	width: 100%;
-  height: 100%;
-	margin: 0 0;
+    margin: 0 0;
+    background-color: #262528;
+    width: 100%;
+    height: 100%;
+
 }
 
-.container {
-  padding: 20px;
+.bordered {
+    border: 10px solid orange;
+    background: transparent;
 }
+
 
 canvas { 
-	display: inline-block; 
-	width: 600px;
-	height: 300px;
+	width: 100%;
+}
+
+#record {
+    position:fixed;
+    float: right;
+    padding: 20px;
 }
 
 #record { height: 15vh; }
 
 #record.recording { 
-	background: red;
-	background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
-	background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
-	background: radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+	background: #272629;
+	background: -webkit-radial-gradient(center, ellipse cover, #637796 0%,#272629 75%,#272629 100%, #637796  100%); 
+	background: -moz-radial-gradient(center, ellipse cover, #637796 0%,#272629 75%,#272629 100%,#637796 100%); 
+	background: radial-gradient(center, ellipse cover, #637796 0%,#272629 75%,#272629 100%, #637796 100%); 
 }
-
-#save, #save img { height: 10vh; }
-
-#save { opacity: 0.25;}
-
-#save[download] { opacity: 1;}
 
 @media (orientation: landscape) {
 	body { flex-direction: row;}
@@ -38,16 +40,10 @@ canvas {
 	#viz { height: 100%; width: 90%;}
 }
 
-h1 {
-  font-size: 60px;
-}
-
 .recorder {
   width: 50%;
 }
 
-.feed-container {
-  height: 50%;
-}
+
 
 
