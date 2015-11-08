@@ -81,6 +81,6 @@ $('#clear').click(function(e) {
 $('#share').click(function() {
   FB.ui({
     method: 'share',
-    href: 'https://developers.facebook.com/docs/',
+    href: 'http://yhackbyte.heroku.com',
   }, function(response){}); 
 });

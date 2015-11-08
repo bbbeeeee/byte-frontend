@@ -4,14 +4,6 @@ window.fbAsyncInit = function() {
     xfbml      : true,
     version    : 'v2.5'
   });
-
-  $('#share').click(function() {
-    FB.ui({
-      method: 'feed',
-      link: 'http://localhost:3000/',
-      caption: 'Hey guys, check out this new stack I made! You can add your own audio to it and make your own!'
-    }, function(response){});
-  });
 };
 
 (function(d, s, id) {
