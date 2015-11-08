@@ -1,9 +1,8 @@
-import bodyParser  from 'body-parser';
-import * as config from './config/config';
-import express     from 'express';
-import convert     from 'cloudconvert';
+var bodyParser = require('body-parser');
+var config = require('./config/config');
+var express = require('express');
 
-let app = express();
+var app = express();
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -19,10 +18,6 @@ app.get('/login', (req, res) => {
 
 app.get('/feed', (req, res) => {
   res.sendfile('public/feed.html');
-});
-
-app.post('/convert', (req, res) => {
-  
 });
 
 app.listen(config.serverPort, () => {
