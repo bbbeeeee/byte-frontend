@@ -15,6 +15,14 @@ var clear = function() {
 
 var playLayers = function() {
   var howlers = [];
+  //howlers[0] = new Howl({
+    //urls: ['http://files.parsetfss.com/d6dcfbd2-d528-447c-9be9-4f5ed7f906e0/tfss-f94928cf-e086-4efe-a4a0-fa45f77d10b5-happybday.mp3']
+  //});
+
+  //howlers[1] = new Howl({
+    //urls: ['http://files.parsetfss.com/d6dcfbd2-d528-447c-9be9-4f5ed7f906e0/tfss-37655162-0e06-4535-8032-88febf61a022-hbd.mp3']
+  //});
+
   layers.forEach(function(item) {
     howlers.push(new Howl({
       urls: [item]
@@ -22,25 +30,22 @@ var playLayers = function() {
   });
 
   howlers.forEach(function(item) {
-    console.log('playing' + item.toString());
-    console.log(item.play());
     item.play();
   });
 
-  var wavesurfer = Object.create(WaveSurfer);
-  console.log(wavesurfer);
+  //var wavesurfer = Object.create(WaveSurfer);
 
-  wavesurfer.init({
-    container: '#lol',
-    waveColor: 'violet',
-    progressColor: 'purple'
-  });
+  //wavesurfer.init({
+    //container: '#lol',
+    //waveColor: 'violet',
+    //progressColor: 'purple'
+  //});
 
-  wavesurfer.on('ready', function () {
-      wavesurfer.play();
-  });
+  //wavesurfer.on('ready', function () {
+      //wavesurfer.play();
+  //});
 
-  wavesurfer.load('lol.wav');
+  //wavesurfer.load('lol.wav');
 };
 
 aQuery.find({
@@ -66,9 +71,16 @@ aQuery.find({
 
 $('#play').click(function(e) {
   playLayers();
+  // Play something
 });
 
 $('#clear').click(function(e) {
   clear();
 });
 
+$('#share').click(function() {
+  FB.ui({
+    method: 'share',
+    href: 'https://developers.facebook.com/docs/',
+  }, function(response){}); 
+});

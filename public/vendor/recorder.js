@@ -119,8 +119,8 @@ DEALINGS IN THE SOFTWARE.
     var name = 'recording-' + (new Date().toJSON()).slice(0, 10);
     name = 'hello.wav';
     name = $('#recordingName').val() + '.wav';
-    //var file = new Parse.File(name, {base64: window.btoa(blob)});
-    var file = new Parse.File(name, blob);
+    var file = new Parse.File(name, {base64: window.btoa(blob)});
+    //var file = new Parse.File(name, blob);
     file.save().then(function() {
       audioObject.set('name', name);
       audioObject.set('audio', file);

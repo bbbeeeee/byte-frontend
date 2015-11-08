@@ -8,7 +8,7 @@ window.fbAsyncInit = function() {
   $('#share').click(function() {
     FB.ui({
       method: 'feed',
-      link: 'https://developers.facebook.com/docs/',
+      link: 'http://localhost:3000/',
       caption: 'Hey guys, check out this new stack I made! You can add your own audio to it and make your own!'
     }, function(response){});
   });
