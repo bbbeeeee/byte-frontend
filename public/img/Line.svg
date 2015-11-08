@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="77px" height="70px" viewBox="0 0 77 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->
+    <title>Line</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="iPhone-6" sketch:type="MSArtboardGroup" transform="translate(-30.000000, -5.000000)" stroke="#FFFFFF" stroke-linecap="square" filter="url(#filter-1)">
+            <path d="M34.0380764,37.8690559 C34.0380764,37.8690559 42.3272198,71 42.3272198,35.5 C42.3272198,5.32907052e-15 48.533515,48.4081277 53.5261659,48.4081277 C56.1198722,48.4081277 54.4143897,7.37828558 57.3459175,7.37828558 C59.9258242,7.37828558 67.5417635,68.3598263 70.3070391,68.3598263 C73.6465273,68.3598263 69.8732871,28.7692406 73.4296152,28.0809471 C78.9468197,27.0131446 79.3191297,56.1614852 85.344977,56.2133686 C88.8391872,56.2434543 85.4484166,36.1354543 89.0977519,35.4999992 C93.8394164,34.6743379 98.916866,34.1828591 104,33.9241188" id="Line" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
