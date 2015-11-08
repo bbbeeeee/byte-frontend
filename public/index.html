@@ -9,6 +9,7 @@
         <script src="vendor/recorder.js"></script>
         <script src="vendor/main.js"></script>
         <script src="vendor/howler.js"></script>
+        <script src="vendor/wavesurfer.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
@@ -19,24 +20,32 @@
                     <div class="RightContent">
                         <div class="top">
                             <div class="iconsTop">
-                                <img src="img/mic.svg">
+                                <img id="record" src="img/mic.svg" onclick="toggleRecording(this);">
                             </div>
                             <div class="iconsTop">
-                                <img style="margin-left:-10px;" src="img/circle.svg">
+                                <a id="save" href="#"><img style="margin-left:-10px;" src="img/circle.svg"></a>
                             </div>
+                            <input type="text" id="recordingName" placeholder="Name">
+                            <canvas id="analyser" width="1024" height="265"></canvas>
+                            <canvas id="wavedisplay" width="1024" height="500"></canvas>
                         </div>
                         <div class="bottom">
-                            <ul class="feed">
-                            </ul>
-                            <div id='play'>Play</div>
-                            
-                            <div id='clear'>Clear</div>
                         </div>
+                        <div id="lol"></div>
                     </div>
                     <div class="LeftContent">
                         <div class="header">
                             <img style="padding-left:20px;padding-top:5px;" src="img/Line.svg">
                             <h1 style="padding-left:100px;margin-top:-60px;;">byte</h1>
+                        </div>
+                        <div class="bottom">
+                            <ul class="feed">
+                            </ul>
+                            <br />
+                            <div class="controls">
+                                <div id='play' class="button">Play</div>
+                                <div id='clear' class="button">Clear</div>
+                            </div>
                         </div>
                     </div>
                 </div>

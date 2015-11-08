@@ -72,7 +72,7 @@ html, body, .Container
 
 .top {
     background-color: #282828;
-    height: 50%;
+    height: 59%;
     margin-bottom: 3px;
     flex-direction: column;
 }
@@ -92,4 +92,45 @@ html, body, .Container
 .header {
     height: 10%;
     border-bottom: 3px #5D5D5D solid;
+}
+
+.layer {
+  padding: 20px;
+}
+
+.layer .name {
+  float: left;
+}
+
+.layer .add {
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.controls {
+  width: 100%;
+  float: none;
+  display: block;
+}
+
+.button {
+  width: 100px;
+  float: left;
+  background-color: white;
+  text-align: center;
+  color: #333;
+  margin: 10px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+#recordingName {
+  margin-top: 10px;
+  border: none;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+  background-color: #333;
 }

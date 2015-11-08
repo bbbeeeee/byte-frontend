@@ -17,7 +17,7 @@ var playLayers = function() {
   var howlers = [];
   layers.forEach(function(item) {
     howlers.push(new Howl({
-      urls: ['lol.wav']
+      urls: [item]
     }));
   });
 
@@ -26,6 +26,21 @@ var playLayers = function() {
     console.log(item.play());
     item.play();
   });
+
+  var wavesurfer = Object.create(WaveSurfer);
+  console.log(wavesurfer);
+
+  wavesurfer.init({
+    container: '#lol',
+    waveColor: 'violet',
+    progressColor: 'purple'
+  });
+
+  wavesurfer.on('ready', function () {
+      wavesurfer.play();
+  });
+
+  wavesurfer.load('lol.wav');
 };
 
 aQuery.find({
@@ -35,7 +50,8 @@ aQuery.find({
         var recordingName = item.get('name')
           .toString();
         // Add in the necessary icons and shit
-        var newItem = '<li><div class="name">' + item.get('name') + '</div><div class="add" id="add' + index + '" data-audio-url="' + item.get('audio').url() + '">+</div></li>';
+        var newItem = '<li class="layer"><div class="name">' + item.get('name') + '</div><div class="add" id="add' + index + '" data-audio-url="' + item.get('audio').url() + '">+</div></li>';
+        newItem += '<br />';
       }
 
       $('.feed').append(newItem);
@@ -55,3 +71,4 @@ $('#play').click(function(e) {
 $('#clear').click(function(e) {
   clear();
 });
+
