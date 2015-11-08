@@ -9,6 +9,13 @@ var addLayer = function(layer) {
   layers.push(layer);
 };
 
+var removeLayer = function(layer) {
+  var index = layers.indexOf(layer);
+  if(index !== -1) {
+    layers.splice(index, 1);
+  }
+}
+
 var clear = function() {
   layers = [];
 };
@@ -61,9 +68,15 @@ aQuery.find({
 
       $('.feed').append(newItem);
 
-      console.log(newItem);
       $('#add' + index).click(function(e) {
-        addLayer($(this).data('audio-url'));
+        var current = $(this).text();
+        current = (current === '+') ? '-' : '+';
+        if(current === '-') {
+          addLayer($(this).data('audio-url'));
+        } else {
+          removeLayer($(this).data('audio-url'));
+        }
+        $(this).text(current);
       });
     });
   }
