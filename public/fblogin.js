@@ -12,7 +12,8 @@ window.fbAsyncInit = function() {
     // the user's ID, a valid access token, a signed
     // request, and the time the access token 
     // and signed request each expire
-    window.location = "/"
+
+    window.location = '/';
     var uid = response.authResponse.userID;
     var accessToken = response.authResponse.accessToken;
   } else if (response.status === 'not_authorized') {
